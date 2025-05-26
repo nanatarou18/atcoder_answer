@@ -9,8 +9,11 @@ int main(){
     vector<int> thickness(N),length(N);
     for(int i=0;i<N;i++)  cin>>thickness[i]>>length[i];
 
-    int max_weight=0;
     for(int i=1;i<=D;i++){
-        
+        int max_weight=0;
+        for(int j=0;j<N;j++){
+            max_weight=max(max_weight,thickness[j]*(length[j]+i));
+        }
+        cout<<max_weight<<endl;
     }
 }
